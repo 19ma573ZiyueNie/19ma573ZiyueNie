@@ -6,7 +6,7 @@ Computational methods of financial math
  * HW1 by colab - [ipynb](src/hw1.ipynb)
  
  * HW2
-  - (hw) Second order finite difference operator - [ipynb](src/hw2_01.ipynb) 
-  - (hw) Finite difference operator with higher order convergence - [ipynb](src/hw2_02.ipynb)
+   - (hw2_01) Second order finite difference operator - [ipynb](src/hw2_01.ipynb) 
+   - (hw2_02) Finite difference operator with higher order convergence - [ipynb](src/hw2_02.ipynb)
  
  
