@@ -9,6 +9,7 @@ Original file is located at
 
 import numpy as np
 import scipy.stats as ss
+import matplotlib.pyplot as plt
 
 class VanillaOption:
     def __init__(
@@ -43,7 +44,7 @@ class Gbm:
 '''========
 Black-Scholes-Merton formula. 
 =========='''
-
+    
 def bsm_price(self, vanilla_option):
     s0 = self.init_state
     sigma = self.vol_ratio
