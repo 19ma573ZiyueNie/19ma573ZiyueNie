@@ -10,6 +10,26 @@ Original file is located at
 import numpy as np
 import scipy.stats as ss
 
+class VanillaOption:
+    def __init__(
+        self,
+        otype = 1, # 1: 'call'
+                  # -1: 'put'
+        strike = 110.,
+        maturity = 1.,
+        market_price = 10.):
+      self.otype = otype
+      self.strike = strike
+      self.maturity = maturity
+      self.market_price = market_price #this will be used for calibration
+      
+        
+    def payoff(self, s): #s: excercise price
+      otype = self.otype
+      k = self.strike
+      maturity = self.maturity
+      return np.max([0, (s - k)*otype])
+  
 class Gbm:
     def __init__(self,
                  init_state = 100.,
