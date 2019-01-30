@@ -10,4 +10,4 @@ Computational methods of financial math
    - (hw2_2) Finite difference operator with higher order convergence - [ipynb](src/hw2_02.ipynb)
  * HW3
    - (hw3_1) Does FFD have convergence order 2? - [ipynb](src/hw3_1.ipynb)
-   - (hw3-3) Bsm price change - [ipynb](src/hw3_1.ipynb)
+   - (hw3-3) Bsm price change - [ipynb](src/hw3_3.ipynb)
