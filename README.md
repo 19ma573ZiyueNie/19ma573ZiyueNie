@@ -8,5 +8,6 @@ Computational methods of financial math
  * HW2
    - (hw2_01) Second order finite difference operator - [ipynb](src/hw2_01.ipynb) 
    - (hw2_02) Finite difference operator with higher order convergence - [ipynb](src/hw2_02.ipynb)
- 
+ * HW3
+   - (hw3_01) Does FFD have convergence order 2? - [ipynb](src/hw
  
