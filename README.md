@@ -13,4 +13,4 @@ Computational methods of financial math
    - (hw3-3) Bsm price change - [ipynb](src/hw3_3.ipynb)
  * HW4
    - (hw4_1) Volatility calibration for BSM - [ipynb](src/hw4_1.ipynb)
-   
+   - (hw4_2) BSM Geometric Asian Option - [ipynb](src/hw4_2.ipynb)
