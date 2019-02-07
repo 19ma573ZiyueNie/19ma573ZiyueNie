@@ -42,7 +42,7 @@ class Gbm_1d(Sde_1d):
         self.vol = lambda x: vol_ratio*x
 
     def bsm_price(self, vanilla_option):
-    s0 = self.init_state
+    S0 = self.init_state
     sigma = self.vol_ratio
     r = self.drift_ratio
     
@@ -50,11 +50,11 @@ class Gbm_1d(Sde_1d):
     k = vanilla_option.strike
     maturity = vanilla_option.maturity
     
-    d1 = (np.log(s0 / k) + (r + 0.5 * sigma ** 2) 
+    d1 = (np.log(S0 / k) + (r + 0.5 * sigma ** 2) 
           * maturity) / (sigma * np.sqrt(maturity))
     d2 = d1 - sigma * np.sqrt(maturity)
     
-    return (otype * s0 * ss.norm.cdf(otype * d1) #line break needs parenthesis
+    return (otype * S0 * ss.norm.cdf(otype * d1) #line break needs parenthesis
             - otype * np.exp(-r * maturity) * k * ss.norm.cdf(otype * d2))
 
    Gbm_1d.bsm_price = bsm_price     
