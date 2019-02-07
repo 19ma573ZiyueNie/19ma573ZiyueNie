@@ -42,14 +42,14 @@ class Gbm_1d(Sde_1d):
         n=m+1
         sigma=self.vol_ratio
         S0=self.init_state
-        T=marturity
+        T=maturity
         K=strike
         r=self.drift_ratio
         mu=r-0.5*sigma**2
         mu_hat=0.5*mu
-        sigma_hat_s=sigma**2*(2*m+1)/(6*(m+1))
-        r_hat=mu_hat+0.5*sigma_hat_s
-        sigma_hat=np.sqrt(sigma_hat_s)
+        sigma_hat_suare=sigma**2*(2*m+1)/(6*(m+1))
+        r_hat=mu_hat+0.5*sigma_hat_square
+        sigma_hat=np.sqrt(sigma_hat_square)
         if otype==1:
             option=VanillaOption(otype = 1, strike = K, maturity= T, market_price=15.)
             return float(np.exp([(r_hat-r)*T])*Gbm_1d(init_state=S0, drift_ratio=r_hat, vol_ratio=sigma_hat).bsm_price(option))
