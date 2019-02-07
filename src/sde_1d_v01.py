@@ -1,11 +1,3 @@
-# coding: utf-8
-
-# # Euler on 1d SDE
-# ## General 1d SDE
-
-# In[1]:
-
-
 import numpy as np
 import matplotlib.pyplot as plt
 import scipy.stats as ss
@@ -49,7 +41,7 @@ class Gbm_1d(Sde_1d):
         self.drift = lambda x: drift_ratio*x
         self.vol = lambda x: vol_ratio*x
 
-   def bsm_price(self, vanilla_option):
+    def bsm_price(self, vanilla_option):
     s0 = self.init_state
     sigma = self.vol_ratio
     r = self.drift_ratio
@@ -65,9 +57,9 @@ class Gbm_1d(Sde_1d):
     return (otype * s0 * ss.norm.cdf(otype * d1) #line break needs parenthesis
             - otype * np.exp(-r * maturity) * k * ss.norm.cdf(otype * d2))
 
-Gbm_1d.bsm_price = bsm_price     
+   Gbm_1d.bsm_price = bsm_price     
 
-   def bsm_geometric_asian_price(self,
+    def bsm_geometric_asian_price(self,
     otype = 1,
     strike = 110.,
     maturity = 1,
