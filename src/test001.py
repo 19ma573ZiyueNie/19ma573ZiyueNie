@@ -36,16 +36,7 @@ class Gbm_1d(Sde_1d):
         d1 = (np.log(s0 / k) + (r + 0.5 * sigma ** 2)* maturity) / (sigma * np.sqrt(maturity))
         d2 = d1 - sigma * np.sqrt(maturity)
         return otype * s0 * ss.norm.cdf(otype * d1)- otype * np.exp(-r * maturity) * k * ss.norm.cdf(otype * d2) 
-    def euler(self, grid):
-        xh=[]
-        n=len(grid)
-        h=grid[n-1]/n
-        for _ in range(n):
-            dw=np.random.normal(0,h,1)
-            xh.append(self.init_state)
-            self.euler_1d_diff(self.init_state,h,dw)
-            self.init_state=self.init_state+self.euler_diff
-        return xh
+   
     def bsm_geometric_asian_price(self, otype=1, strike=110, maturity=1, num_step=4):
         m=num_step
         n=m+1
@@ -68,22 +59,12 @@ class Gbm_1d(Sde_1d):
             
 
 if __name__ == '__main__':
-    gbm1 = Gbm_1d(init_state=10., drift_ratio=.03, vol_ratio=.25)
-    grid = np.linspace(0,1,100)
-    plt.figure()
-    plt.title('test Gbm_1d.euler')
-    plt.xlabel('time')
-    plt.ylabel('state')
-    for i in range(5):
-        xh = gbm1.euler(grid)
-        plt.plot(grid, xh)
-    plt.show()
     gbm1 = Gbm_1d(init_state=100., drift_ratio=.0475, vol_ratio=.2)
     option1 = VanillaOption(otype = 1, strike = 110., maturity= 1., market_price=15.) 
     
     print('>>>>>>>>>>call value is ' + str(gbm1.bsm_price(option1)))
-    option2 = VanillaOption(otype=-1, strike = 110., maturity= 1., market_price=15.)
-    print('>>>>>>>>>>put value is ' + str(gbm1.bsm_price(option2)))
+    option2 = VanillaOption(otype=-1)
+    print('>>>>>>>>>>put value is ' + str(gbm1.bsm_price(option2)))  
         
         
         
