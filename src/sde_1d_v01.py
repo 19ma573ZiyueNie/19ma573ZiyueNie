@@ -49,12 +49,7 @@ class Gbm_1d(Sde_1d):
         self.drift = lambda x: drift_ratio*x
         self.vol = lambda x: vol_ratio*x
 
-
-'''========
-Black-Scholes-Merton formula. 
-=========='''
-
- def bsm_price(self, vanilla_option):
+   def bsm_price(self, vanilla_option):
     s0 = self.init_state
     sigma = self.vol_ratio
     r = self.drift_ratio
@@ -72,12 +67,12 @@ Black-Scholes-Merton formula.
 
 Gbm_1d.bsm_price = bsm_price     
 
-def bsm_geometric_asian_price(self,
-otype = 1,
-strike = 110.,
-maturity = 1,
-num_step = 4 #patition number
-):
+   def bsm_geometric_asian_price(self,
+    otype = 1,
+    strike = 110.,
+    maturity = 1,
+     num_step = 4 #patition number
+     ):
     m=num_step
     n=m+1
     r=self.drift_ratio
@@ -97,7 +92,7 @@ num_step = 4 #patition number
             option=VanillaOption(otype = -1, strike = K, maturity= T, market_price=15.)
             return float(np.exp([(r_hat-r)*T])*Gbm_1d(init_state=S0, drift_ratio=r_hat, vol_ratio=sigma_hat).bsm_price(option))
 
-Gbm_1d.bsm_geometric_asian_price = bsm_geometric_asian_price
+    Gbm_1d.bsm_geometric_asian_price = bsm_geometric_asian_price
 
 
 
