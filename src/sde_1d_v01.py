@@ -47,7 +47,7 @@ class Gbm_1d(Sde_1d):
         r=self.drift_ratio
         mu=r-0.5*sigma**2
         mu_hat=0.5*mu
-        sigma_hat_suare=sigma**2*(2*m+1)/(6*(m+1))
+        sigma_hat_square=sigma**2*(2*m+1)/(6*(m+1))
         r_hat=mu_hat+0.5*sigma_hat_square
         sigma_hat=np.sqrt(sigma_hat_square)
         if otype==1:
