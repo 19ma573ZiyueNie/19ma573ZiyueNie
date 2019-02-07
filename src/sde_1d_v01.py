@@ -70,7 +70,17 @@ def bsm_price(self, vanilla_option):
     return (otype * s0 * ss.norm.cdf(otype * d1) #line break needs parenthesis
             - otype * np.exp(-r * maturity) * k * ss.norm.cdf(otype * d2))
 
-Gbm_1d.bsm_price = bsm_price        
+Gbm_1d.bsm_price = bsm_price     
+
+def bsm_geometric_asian_price(self,
+otype = 1,
+strike = 110.,
+maturity = 1,
+num_step = 4 #patition number
+):
+#-->>> input your code here
+pass
+Gbm_1d.bsm_geometric_asian_price = bsm_geometric_asian_price
 
 
 
