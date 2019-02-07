@@ -46,7 +46,7 @@ class Gbm_1d(Sde_1d):
             self.euler_1d_diff(self.init_state,h,dw)
             self.init_state=self.init_state+self.euler_diff
         return xh
-    def bsm_geometric_asian_price(self, otype=1, strike=110, marturity=1, num_step=4):
+    def bsm_geometric_asian_price(self, otype=1, strike=110, maturity=1, num_step=4):
         m=num_step
         n=m+1
         sigma=self.vol_ratio
