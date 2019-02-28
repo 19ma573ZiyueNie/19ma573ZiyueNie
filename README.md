@@ -17,4 +17,9 @@ Computational methods of financial math
  * HW5
    - (hw5_1) Estimating pi proof - [ipynb](src/hw5_1.ipynb)
    - (hw5_2) Estimating pi - [ipynb](src/hw5_2.ipynb)
+ * HW6
+   - (hw6_1) Ordinary Monte Carlo - [ipynb]
+   - (hw6_2) Importance sampling - [ipynb]
+   - (hw6_3) bsm + aac + exact sampling - [ipynb]
+   
 
