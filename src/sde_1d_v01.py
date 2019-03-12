@@ -61,7 +61,7 @@ class Gbm_1d(Sde_1d):
         else:
             option=VanillaOption(otype = -1, strike = K, maturity= T, market_price=15.)
             return float(np.exp([(r_hat-r)*T])*Gbm_1d(init_state=S0, drift_ratio=r_hat, vol_ratio=sigma_hat).bsm_price(option))
-         def S_price(self, w, t):
+    def S_price(self, w, t):
         return self.init_state*np.exp((self.drift_ratio-0.5*self.vol_ratio**2)*t+self.vol_ratio*w)
     def bsm_arithmetic_asian_exact_sample(self, otype, strike, maturity, num_step, num_path):
         W=[]
