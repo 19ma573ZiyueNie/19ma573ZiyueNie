@@ -29,4 +29,7 @@ Computational methods of financial math
    - (hw8_1) Fourier transform to find BSM call price - [ipynb](src/hw8_1.ipynb)
    - (hw8_2) Heston model - [ipynb](src/hw8_2.ipynb)
    - (hw8_3) derivation of characteristic function - [ipynb](src/hw8_3.ipynb)  
-
+ * HW10
+   - (hw10_1) FTCS and stability: Heat equation with Cauchy-Dirichlet data - [ipynb](src/hw10_1.ipynb)
+   - (hw10_2) FTCS stability questions - [ipynb](src/hw10_2.ipynb)
+   - (hw10_3) 2-d Ito formula - [ipynb](src/hw10_3.ipynb)  
