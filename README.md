@@ -32,4 +32,4 @@ Computational methods of financial math
  * HW10
    - (hw10_1) FTCS and stability: Heat equation with Cauchy-Dirichlet data - [ipynb](src/hw10_1.ipynb)
    - (hw10_2) FTCS stability questions - [ipynb](src/hw10_2.ipynb)
-   - (hw10_3) 2-d Ito formula - [ipynb](src/hw10_3.ipynb)  
+   - (hw10_3) 2-d Ito formula - [ipynb](src/hw10_3.ipynb)  -Some terms are not shown in ipynb file, please view it in colab.
