@@ -36,3 +36,5 @@ Computational methods of financial math
  * HW11
    - (hw11_1) BTCS and CRR - [ipynb](src/hw11_1.ipynb)
    - (hw11_2) BTCS with Heat equation - [ipynb](src/hw11_2.ipynb)
+ * HW12
+   - (hw12_1) OMC and Importance sampling with digital option- [ipynb](src/hw12.ipynb)
